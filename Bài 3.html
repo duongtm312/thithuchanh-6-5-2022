@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isFibonacci(x) {
+        let arr = [1]
+        let i = 1;
+        let j = 1
+        let check = true
+        while (check) {
+            j = i - j
+            i = i + j
+            arr.push(i)
+            for (let k = 0; k < arr.length; k++) {
+                if (arr[k] == x) {
+                    return true
+                }
+            }
+            if (x<i){
+                return false
+            }
+        }
+    }
+
+    console.log(isFibonacci(58845))
+
+</script>
+</body>
+</html>
