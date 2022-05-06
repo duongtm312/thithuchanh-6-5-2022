@@ -7,26 +7,19 @@
 <body>
 <script>
     function isFibonacci(x) {
-        let arr = [1]
         let i = 1;
         let j = 1
-        let check = true
-        while (check) {
+        while (i <x ) {
             j = i - j
             i = i + j
-            arr.push(i)
-            for (let k = 0; k < arr.length; k++) {
-                if (arr[k] == x) {
-                    return true
-                }
-            }
-            if (x<i){
-                return false
-            }
         }
+        if (i === x) {
+            return true
+        }else return false
+
     }
 
-    console.log(isFibonacci(58845))
+    console.log(isFibonacci(13))
 
 </script>
 </body>
